@@ -24,7 +24,7 @@ pipeline{
                    do
                            echo "my IP is :$myIP"
                            ssh -i /tmp/sep22.pem ec2-user@${myIP} "hostname"
-                           scp -i /tmp/sep22.pem hello-$MY_BUILD_NUMBER.war ec2-user@${myIP}:/var/lib/tomcat/webapps/
+                           scp -o StrictHostKeyChecking=no -i /tmp/sep22.pem hello-$MY_BUILD_NUMBER.war ec2-user@${myIP}:/var/lib/tomcat/webapps/
                 done
                     '''
             }
