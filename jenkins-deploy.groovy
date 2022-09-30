@@ -1,6 +1,6 @@
 pipeline{
     agent any
-    parameter{
+    parameters{
         string (name:'SOURCE_BRANCH',defaultValue:'master',description:'provide source code branch')
         string (name:'ServerIP',description:"provide your server IP's")
         string (name:'BUILD_JOB_NAME',description:'')
